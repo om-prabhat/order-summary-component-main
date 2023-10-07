@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;0,900;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family: 'Red Hat Display', sans-serif;
+
+    /* Primary */
+
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+    font-family: var(--font-family);
+    background-color: var(--pale-blue);
+    background-image: url('./images/pattern-background-mobile.svg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 450px;
+    height: auto;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.hero {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+h2 {
+    padding-top: 25px;
+    font-weight: 900;
+}
+
+.subject {
+    text-align: center;
+    padding: 20px 5.5rem 20px 5.5rem;
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--very-pale-blue);
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0px 3rem 20px 3rem;
+}
+
+.annual {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8rem;
+}
+
+.a {
+    font-weight: 900;
+}
+
+.b {
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+
+.left {
+    margin-left: 2rem;
+}
+
+.pp:hover,
+.cancel:hover,
+.left:hover {
+    cursor: pointer;
+}
+
+.pp {
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: 12px;
+    font-weight: 900;
+    color: white;
+    background-color: var(--bright-blue);
+    margin-bottom: 2.5rem;
+    text-decoration: none;
+    /* line-height: 4rem; */
+    box-shadow: 0rem 1rem 2rem 1rem hsla(245, 75%, 52%, .2);
+}
+
+.cancel {
+    /* line-height: 4rem; */
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--desaturated-blue);
+    margin-bottom: 2.5rem;
+}
+
+.attribution {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        background-image: url(./images/pattern-background-desktop.svg);
+    }
+}
+
+@media screen and (width: 1440px) {
+    .attribution {
+        color: transparent;
+    }
+
+    .attribution a {
+        color: transparent;
+        text-decoration: none;
+    }
+}
